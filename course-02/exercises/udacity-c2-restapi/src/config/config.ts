@@ -1,19 +1,26 @@
+require('dotenv').config()
+
 export const config = {
   "dev": {
-    "username": "",
-    "password": "",
-    "database": "",
-    "host": "",
+    "username": process.env.DB_USER,
+    "password": process.env.DB_PASS,
+    "database": process.env.DB_NAME,
+    "host": process.env.DB_HOST,
     "dialect": "postgres",
-    "aws_region": "us-east-2",
-    "aws_profile": "default",
-    "aws_media_bucket": "udagram-ruttner-dev"
+    "operatorsAliases": false,
+    "aws_region": process.env.AWS_REGI,
+    "aws_profile": process.env.AWS_PROF,
+    "aws_media_bucket": process.env.AWS_BUCK
   },
   "prod": {
-    "username": "",
-    "password": "",
-    "database": "udagram_prod",
-    "host": "",
-    "dialect": "postgres"
+    "username": process.env.DB_USER,
+    "password": process.env.DB_PASS,
+    "database": process.env.DB_NAME,
+    "host": process.env.DB_HOST,
+    "dialect": "postgres",
+    "operatorsAliases": false,
+    "aws_region": process.env.AWS_REGI,
+    "aws_profile": process.env.AWS_PROF,
+    "aws_media_bucket": process.env.AWS_BUCK
   }
 }
