@@ -22,5 +22,8 @@ export const config = {
     "aws_region": process.env.AWS_REGI,
     "aws_profile": process.env.AWS_PROF,
     "aws_media_bucket": process.env.AWS_BUCK
+  },
+  "jwt":{
+    "secret": "helloworld"
   }
 }
